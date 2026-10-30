@@ -6,18 +6,11 @@
 
 *Rabbi zidni ilma*
 
-A small, responsive cosmetics storefront built with HTML and Tailwind CSS. Product filters and the mobile menu use native HTML and CSS; the page has no JavaScript runtime.
+A small, responsive cosmetics storefront built with HTML, CSS and Tailwind CSS. Product filters and the mobile menu use native HTML and CSS, with no custom JavaScript.
 
 ## Run
 
-Open `index.html` in a browser. The compiled `dist.css` is included, so no build step is needed to view the site.
-
-To rebuild the CSS after editing Tailwind classes:
-
-```sh
-npm install
-npm run build
-```
+Open `index.html` in a browser. Tailwind CSS loads from its CDN, so an internet connection is needed for Tailwind utility styles; the custom styles are in `style.css`.
 
 ## About
 
