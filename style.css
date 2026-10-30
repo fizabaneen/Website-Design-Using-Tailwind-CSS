@@ -24,3 +24,40 @@
 		transform: none;
 	}
 }
+
+.navbar-menu {
+	display: none;
+}
+
+#navbar-open:checked ~ .navbar-menu {
+	display: block;
+}
+
+#navbar-open:focus-visible + .menu-toggle,
+.service-filter-controls input:focus-visible + label {
+	outline: 2px solid #9f1239;
+	outline-offset: 3px;
+}
+
+.service-filter-controls:has(#filter-all:checked) label[for="filter-all"],
+.service-filter-controls:has(#filter-makeup:checked) label[for="filter-makeup"],
+.service-filter-controls:has(#filter-skincare:checked) label[for="filter-skincare"],
+.service-filter-controls:has(#filter-fragrance:checked) label[for="filter-fragrance"],
+.service-filter-controls:has(#filter-gifts:checked) label[for="filter-gifts"] {
+	background: #881337;
+	border-color: #881337;
+	color: #fff;
+}
+
+.service-filter-controls:has(#filter-makeup:checked) ~ #product-grid .product-card:not([data-category="makeup"]),
+.service-filter-controls:has(#filter-skincare:checked) ~ #product-grid .product-card:not([data-category="skincare"]),
+.service-filter-controls:has(#filter-fragrance:checked) ~ #product-grid .product-card:not([data-category="fragrance"]),
+.service-filter-controls:has(#filter-gifts:checked) ~ #product-grid .product-card:not([data-category="gifts"]) {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.navbar-menu {
+		display: block;
+	}
+}
